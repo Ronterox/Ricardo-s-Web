@@ -1,10 +1,12 @@
 body
 {
+	/*CHANGE THIS BACKGROUND TO WHITE FOR HOVERING SIZE*/
 	background: rgb(58,58,58);
 	color: white;
 	font-family: fantasy;
 	font-size: 150%;
 	margin: 0;
+	overflow-x: hidden;
 	text-align: center;
 }
 
@@ -27,6 +29,10 @@ section
 	float: left;
 	width: 50%;
 }
+section h1
+{
+	color: #333;
+}
 
 img.profile
 {
@@ -34,7 +40,23 @@ img.profile
 	border-color: white;
 	border-radius: 50%;
 	height: 20%;
+	transition: 0.5s;
 	width: 20%;
+}
+
+.product
+{
+	width: 100%;
+	transition: 0.3s;
+}
+
+.product img
+{
+	border: solid;
+	box-sizing: border-box;
+	height: auto;
+	margin: 50px;
+	width: 50%;
 }
 
 footer
@@ -42,4 +64,64 @@ footer
 	background: black;
 	clear: both;
 	padding: 15px;
+}
+
+/*---------- Actions, Animations ----------*/
+.product:hover
+{
+	cursor: pointer;
+	width: 200%;
+}
+
+.product:hover img
+{
+	border-color: black;
+	border-width: 5px;
+}
+
+.product:active img
+{
+	border-color: red;
+	border-width: 10px;
+}
+
+img.profile:hover
+{
+	border-color: transparent;
+	cursor: pointer;
+}
+
+img.profile:active
+{
+	width: 40%;
+}
+
+/*---------- Media Queries ----------*/
+@media screen and (max-width: 1100px)
+{
+	.product img
+	{
+		margin: 40px;
+	}
+}
+
+@media screen and (max-width: 900px)
+{
+	.product img
+	{
+		margin: 20px;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	.product img
+	{
+		margin: 10px;
+	}
+
+	section
+	{
+		width: 100%;
+	}
 }
