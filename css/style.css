@@ -1,9 +1,9 @@
 body
 {
-	/*CHANGE THIS BACKGROUND TO WHITE FOR HOVERING SIZE*/
-	background: rgb(58,58,58);
+	/*CHANGED THIS BACKGROUND TO WHITE FOR HOVERING SIZE*/
+	background: /*rgb(58,58,58)*/white;
 	color: white;
-	font-family: fantasy;
+	font-family: "Lobster";
 	font-size: 150%;
 	margin: 0;
 	overflow-x: hidden;
@@ -13,7 +13,7 @@ body
 header
 {
 	background: black;
-	padding: 15px;
+	padding: 1.5rem;
 }
 
 section ul
@@ -55,7 +55,7 @@ img.profile
 	border: solid;
 	box-sizing: border-box;
 	height: auto;
-	margin: 50px;
+	margin: 1.5rem;
 	width: 50%;
 }
 
@@ -63,7 +63,7 @@ footer
 {
 	background: black;
 	clear: both;
-	padding: 15px;
+	padding: 1.5rem;
 }
 
 /*---------- Actions, Animations ----------*/
@@ -73,16 +73,21 @@ footer
 	width: 200%;
 }
 
+.product:active
+{
+	width: 500%;
+}
+
 .product:hover img
 {
 	border-color: black;
-	border-width: 5px;
+	border-width: 0.5rem;
 }
 
 .product:active img
 {
 	border-color: red;
-	border-width: 10px;
+	border-width: 1rem;
 }
 
 img.profile:hover
@@ -101,7 +106,7 @@ img.profile:active
 {
 	.product img
 	{
-		margin: 40px;
+		margin: 1rem;
 	}
 }
 
@@ -109,7 +114,7 @@ img.profile:active
 {
 	.product img
 	{
-		margin: 20px;
+		margin: 0.5rem;
 	}
 }
 
@@ -117,7 +122,7 @@ img.profile:active
 {
 	.product img
 	{
-		margin: 10px;
+		margin: 0.25rem;
 	}
 
 	section
