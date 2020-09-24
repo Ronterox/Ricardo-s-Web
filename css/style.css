@@ -22,9 +22,7 @@ img
 header
 {
 	background: black;
-	opacity: 0.9;
 	padding: 1.5rem;
-	transition: 0.5s;
 }
 
 header h2
@@ -32,22 +30,7 @@ header h2
 	margin: 0;
 }
 
-header img
-{
-	height: 90%;
-	opacity: 0.5;
-	width: 100%;
-	border-radius: 15rem;
-	transition: 0.5s;
-}
-
-nav
-{
-	display: flex;
-	justify-content: center;
-}
-
-nav h1
+header h1
 {
 	background-color: rgba(58, 58, 58, 0.2);
 	border: outset white;
@@ -68,8 +51,6 @@ section
 	background: white;
 	color: gray;
 	float: left;
-	opacity: 0.5;
-	transition: 0.5s;
 	width: 50%;
 }
 
@@ -135,20 +116,6 @@ footer
 }
 
 /*---------- Actions, Animations ----------*/
-header:hover
-{
-	opacity: 1;
-}
-
-header img:hover
-{
-	opacity: 1;
-}
-
-section:hover
-{
-	opacity: 1;
-}
 
 .product:hover
 {
