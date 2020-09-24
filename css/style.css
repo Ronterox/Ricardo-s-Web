@@ -1,7 +1,7 @@
 *
 {
-	overflow-x: hidden;
 	font-family: "Lobster";
+	overflow-x: hidden;
 }
 
 body
@@ -14,10 +14,47 @@ body
 	text-align: center;
 }
 
+img
+{
+	border-radius: 0.5rem;
+}
+
 header
 {
 	background: black;
+	opacity: 0.9;
 	padding: 1.5rem;
+	transition: 0.5s;
+}
+
+header h2
+{
+	margin: 0;
+}
+
+header img
+{
+	height: 90%;
+	opacity: 0.5;
+	width: 100%;
+	border-radius: 15rem;
+	transition: 0.5s;
+}
+
+nav
+{
+	display: flex;
+	justify-content: center;
+}
+
+nav h1
+{
+	background-color: rgba(58, 58, 58, 0.2);
+	border: outset white;
+	color: red;
+	font-size: 3.5rem;
+	margin: 5rem 5rem;
+	padding: 5vw;
 }
 
 section ul
@@ -31,22 +68,14 @@ section
 	background: white;
 	color: gray;
 	float: left;
+	opacity: 0.5;
+	transition: 0.5s;
 	width: 50%;
 }
 
 section h1
 {
 	color: #333;
-}
-
-img.profile
-{
-	border: solid;
-	border-color: white;
-	border-radius: 50%;
-	height: 20%;
-	transition: 0.5s;
-	width: 20%;
 }
 
 .product
@@ -68,15 +97,16 @@ img.profile
 {
 	background-color: rgb(58,58,58);
 	border: ridge 0.3rem black;
+	border-radius: 1rem;
 	color: white;
 	opacity: 0;
+	max-width: 25%;
 	padding: 5%;
 	position: absolute;
 	text-align: center;
 	transition: all 0.5s;
 	transform: translate(-10%,-150%);
 	visibility: hidden;
-	width: 25%;
 }
 
 .info-popup a
@@ -97,12 +127,6 @@ img.profile
 	font-weight: bold;
 }
 
-.info-popup.active
-{
-	opacity: 0.9;
-	visibility: visible;
-}
-
 footer
 {
 	background: black;
@@ -111,26 +135,37 @@ footer
 }
 
 /*---------- Actions, Animations ----------*/
+header:hover
+{
+	opacity: 1;
+}
+
+header img:hover
+{
+	opacity: 1;
+}
+
+section:hover
+{
+	opacity: 1;
+}
+
 .product:hover
 {
 	cursor: pointer;
 	width: 200%;
 }
 
+.product:hover .info-popup
+{
+	opacity: 0.9;
+	visibility: visible;
+}
+
 .product:hover img
 {
 	border-color: black;
 	border-width: 0.5rem;
-}
-
-img.profile:hover
-{
-	border-color: transparent;
-}
-
-img.profile:active
-{
-	width: 40%;
 }
 
 li.product a:hover
