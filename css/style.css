@@ -1,12 +1,16 @@
+*
+{
+	overflow-x: hidden;
+	font-family: "Lobster";
+}
+
 body
 {
 	/*CHANGED THIS BACKGROUND TO WHITE FOR HOVERING SIZE*/
 	background: /*rgb(58,58,58)*/white;
 	color: white;
-	font-family: "Lobster";
 	font-size: 150%;
 	margin: 0;
-	overflow-x: hidden;
 	text-align: center;
 }
 
@@ -29,6 +33,7 @@ section
 	float: left;
 	width: 50%;
 }
+
 section h1
 {
 	color: #333;
@@ -62,25 +67,39 @@ img.profile
 .info-popup
 {
 	background-color: rgb(58,58,58);
-	border: solid 0.3rem black;
+	border: ridge 0.3rem black;
 	color: white;
 	opacity: 0;
 	padding: 5%;
 	position: absolute;
 	text-align: center;
 	transition: all 0.5s;
-	transform: translateY(-160%);
+	transform: translate(-10%,-150%);
 	visibility: hidden;
+	width: 25%;
 }
 
 .info-popup a
 {
-	color: red;
+	background-color: rgba(255,255,255,0.7);
+	border: solid black;
+	border-radius: 5rem;
+	color: black;
+	font-size: 1vw;
+	font-weight: bold;
+	padding: 0.8rem;
+	text-decoration: none;
+}
+
+.info-popup p
+{
+	font-size: 2vw;
+	font-weight: bold;
 }
 
 .info-popup.active
 {
-	opacity: 1;
+	opacity: 0.9;
 	visibility: visible;
 }
 
@@ -98,32 +117,26 @@ footer
 	width: 200%;
 }
 
-.product:active
-{
-	width: 500%;
-}
-
 .product:hover img
 {
 	border-color: black;
 	border-width: 0.5rem;
 }
 
-.product:active img
-{
-	border-color: red;
-	border-width: 1rem;
-}
-
 img.profile:hover
 {
 	border-color: transparent;
-	cursor: pointer;
 }
 
 img.profile:active
 {
 	width: 40%;
+}
+
+li.product a:hover
+{
+	color: white;
+	background-color: black;
 }
 
 /*---------- Media Queries ----------*/
@@ -148,6 +161,12 @@ img.profile:active
 	.product img
 	{
 		margin: 0.25rem;
+	}
+
+	.info-popup a, p
+	{
+		display: flex;
+		flex-flow: column;
 	}
 
 	section
