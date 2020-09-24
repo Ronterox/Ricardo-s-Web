@@ -59,6 +59,31 @@ img.profile
 	width: 50%;
 }
 
+.info-popup
+{
+	background-color: rgb(58,58,58);
+	border: solid 0.3rem black;
+	color: white;
+	opacity: 0;
+	padding: 5%;
+	position: absolute;
+	text-align: center;
+	transition: all 0.5s;
+	transform: translateY(-160%);
+	visibility: hidden;
+}
+
+.info-popup a
+{
+	color: red;
+}
+
+.info-popup.active
+{
+	opacity: 1;
+	visibility: visible;
+}
+
 footer
 {
 	background: black;
