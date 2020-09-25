@@ -72,6 +72,15 @@ section h1
 	height: auto;
 	margin: 1.5rem;
 	width: 20vw;
+	transition: 0.3s;
+}
+
+.product span
+{
+	color: black;
+	font-size: 2vw;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .info-popup
@@ -119,6 +128,7 @@ footer
 	background: black;
 	clear: both;
 	font-weight: bold;
+	font-size: 2vw;
 	justify-content: center;
 	padding: 1.5rem;
 	width: 100%;
@@ -181,9 +191,14 @@ li.product a:hover
 	{
 		margin: 0.25rem;
 	}
+
+	.info-popup
+	{
+		transform: translate(0%,-140%);
+	}
 }
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 700px)
 {
 	.info-popup a, p
 	{
