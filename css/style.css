@@ -9,7 +9,7 @@ body
 	/*CHANGED THIS BACKGROUND TO WHITE FOR HOVERING SIZE*/
 	background: /*rgb(58,58,58)*/white;
 	color: white;
-	font-size: 150%;
+	font-size: 4vh;
 	margin: 0;
 	text-align: center;
 }
@@ -34,8 +34,8 @@ header h1
 {
 	background-color: rgba(58, 58, 58, 0.2);
 	border: outset white;
-	color: red;
-	font-size: 3.5rem;
+	color: magenta;
+	font-size: 5vw;
 	margin: 5rem 5rem;
 	padding: 5vw;
 }
@@ -71,7 +71,7 @@ section h1
 	box-sizing: border-box;
 	height: auto;
 	margin: 1.5rem;
-	width: 50%;
+	width: 20vw;
 }
 
 .info-popup
@@ -81,7 +81,7 @@ section h1
 	border-radius: 1rem;
 	color: white;
 	opacity: 0;
-	max-width: 25%;
+	max-width: 25%; 
 	padding: 5%;
 	position: absolute;
 	text-align: center;
@@ -108,14 +108,38 @@ section h1
 	font-weight: bold;
 }
 
+.hide
+{
+	visibility: hidden;
+}
+
 footer
 {
 	background: black;
 	clear: both;
+	font-weight: bold;
+	justify-content: center;
 	padding: 1.5rem;
+	width: 100%;
+}
+
+footer a
+{
+	border: solid gray;
+}
+
+footer img
+{
+	transition: 0.3s;
+	width: 5vw;
 }
 
 /*---------- Actions, Animations ----------*/
+
+footer a:hover img
+{
+	width: 5.5vw;
+}
 
 .product:hover
 {
