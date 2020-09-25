@@ -76,9 +76,6 @@ section h1
 
 .info-popup
 {
-	background-color: rgb(58,58,58);
-	border: ridge 0.3rem black;
-	border-radius: 1rem;
 	color: white;
 	opacity: 0;
 	max-width: 25%; 
@@ -86,7 +83,7 @@ section h1
 	position: absolute;
 	text-align: center;
 	transition: all 0.5s;
-	transform: translate(-10%,-150%);
+	transform: translate(0%,-129%);
 	visibility: hidden;
 }
 
@@ -104,8 +101,12 @@ section h1
 
 .info-popup p
 {
+	background-color: rgb(58,58,58);
+	border: ridge white 1vw;
 	font-size: 2vw;
 	font-weight: bold;
+	max-height: 15vh;
+	padding: 1rem;
 }
 
 .hide
@@ -130,7 +131,7 @@ footer a
 
 footer img
 {
-	transition: 0.3s;
+	transition: 0.15s;
 	width: 5vw;
 }
 
@@ -178,17 +179,12 @@ li.product a:hover
 {
 	.product img
 	{
-		margin: 0.5rem;
+		margin: 0.25rem;
 	}
 }
 
 @media screen and (max-width: 600px)
 {
-	.product img
-	{
-		margin: 0.25rem;
-	}
-
 	.info-popup a, p
 	{
 		display: flex;
