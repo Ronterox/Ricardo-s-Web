@@ -1,23 +1,49 @@
-const newYearDate = new Date('1 Jan 2021');
 var seconds, minutes, hours, days;
 const secElem = document.getElementById("seconds");
 const minElem = document.getElementById("minutes");
 const hourElem = document.getElementById("hours");
 const dayElem = document.getElementById("days");
 
-function countdown() 
-{
-    const currentDate = new Date();
-    const totalSeconds = Math.round((newYearDate - currentDate) / 1000);
-    days = Math.round(totalSeconds / 3600 / 24);
-    hours = Math.round(totalSeconds / 3600 % 60);
-    minutes = Math.round(totalSeconds / 60 % 60);
-    seconds = Math.round(totalSeconds % 60);
+const userDate = document.getElementById("user-date");
 
-    secElem.innerHTML = seconds;
-    minElem.innerHTML = minutes;
-    hourElem.innerHTML = hours;
-    dayElem.innerHTML = days;
+function setMinDate() {
+    var today = new Date();
+    var mm = today.getMonth() + 1;
+    var dd = today.getDate() + 1;
+    const yyyy = today.getFullYear();
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    today = yyyy + '-' + mm + '-' + dd;
+
+    userDate.setAttribute("min", today);
+    userDate.setAttribute("value", today);
 }
 
+function formatTime(time) {
+    if (time < 10)
+        return '0' + time;
+    return time;
+}
+
+function countdown() {
+    const currentDate = new Date();
+    const totalSeconds = (userDate.valueAsDate - currentDate) / 1000;
+
+    days = Math.round(totalSeconds / 3600 / 24);
+    hours = Math.round(totalSeconds / 3600) % 24;
+    minutes = Math.round(totalSeconds / 60) % 60;
+    seconds = Math.round(totalSeconds) % 60;
+
+    secElem.innerHTML = formatTime(seconds);
+    minElem.innerHTML = formatTime(minutes);
+    hourElem.innerHTML = formatTime(hours);
+    dayElem.innerHTML = formatTime(days);
+}
+
+setMinDate();
 setInterval(countdown, 1000);
