@@ -1,3 +1,4 @@
+/* ---------- Default ---------- */
 *
 {
 	font-family: "Lobster";
@@ -14,9 +15,15 @@ body
 	text-align: center;
 }
 
+a
+{
+	text-decoration: none;
+}
+
 img
 {
 	border-radius: 0.5rem;
+	min-height: 5vw;
 }
 
 header
@@ -105,7 +112,6 @@ section h1
 	font-size: 1vw;
 	font-weight: bold;
 	padding: 0.8rem;
-	text-decoration: none;
 }
 
 .info-popup p
@@ -145,7 +151,44 @@ footer img
 	width: 5vw;
 }
 
+/* ---------- Counter-Timer-Style ---------- */
+
+.countdown-timer
+{
+	background: url("../media/images/snow.jpg");
+	background-size: cover;
+}
+
+.countdown-name
+{
+	color: black;
+	display: flex;
+	font-size: 7vw;
+	justify-content: center;
+}
+
+.countdown-container
+{
+	color: black;
+	display: flex;
+	justify-content: center;
+}
+
+.countdown-container li
+{
+	font-size: 6vw;
+	margin: 1.5rem;
+}
+
+.countdown-container li span
+{
+	font-size: 4vw;
+	margin: 1.5rem;
+}
+
 /*---------- Actions, Animations ----------*/
+
+/* ---------- Default ---------- */
 
 footer a:hover img
 {
@@ -167,7 +210,6 @@ footer a:hover img
 .product:hover img
 {
 	border-color: black;
-	border-width: 0.5rem;
 }
 
 li.product a:hover
