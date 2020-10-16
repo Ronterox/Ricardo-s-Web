@@ -187,6 +187,43 @@ footer img
 	margin: 1.5rem;
 }
 
+/* ---------- Quiz Style ---------- */
+
+.quiz-container
+{
+	color: black;
+	border: #333 solid;
+	border-radius: 1rem;
+	margin: 1rem;
+	max-height: 90%;
+	max-width: 100%;
+}
+
+.quiz-container ul li input, label
+{
+	cursor: pointer;
+	margin: 0 0.5rem;
+	float: left;
+	font-size: 1.2rem;
+}
+
+#submit
+{
+	background-color: blueviolet;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	margin: 2rem;
+	width: 12rem;
+}
+
+.middle-space
+{
+	display: flex;
+	height: 25rem;
+	justify-content: center;
+}
+
 /*---------- Actions, Animations ----------*/
 
 /* ---------- Default ---------- */
@@ -217,6 +254,13 @@ li.product a:hover
 {
 	color: white;
 	background-color: black;
+}
+
+/* ---------- Quiz Animations ---------- */
+
+.submit:hover
+{
+	background-color: violet;
 }
 
 /*---------- Media Queries ----------*/
