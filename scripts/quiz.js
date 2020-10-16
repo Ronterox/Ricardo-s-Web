@@ -65,9 +65,12 @@ submitObj.addEventListener("click", () => {
             correctAnswers++;
         loadQuestion();
     }
-    else {
-        //TODO: Show results
-        console.log('You have '+ correctAnswers + ' correct answers!');
+    else if(getSelected() != undefined)
+    {
+        if(getSelected() == questions[currentQuestion - 1].correctAnswer)
+            correctAnswers++;
+            
+        document.getElementById("quiz").innerHTML = `<h2>You answered ${correctAnswers} out of ${questions.length} correctly!</h2><button id="submit" onClick="location.reload()">Reload</button>`;
     }
 });
 loadQuestion();

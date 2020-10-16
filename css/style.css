@@ -195,8 +195,8 @@ footer img
 	border: #333 solid;
 	border-radius: 1rem;
 	margin: 1rem;
-	max-height: 90%;
-	max-width: 100%;
+	height: 21.3rem;
+	width: 25rem;
 }
 
 .quiz-container ul li input, label
@@ -213,8 +213,8 @@ footer img
 	color: white;
 	cursor: pointer;
 	font-weight: bold;
-	margin: 2rem;
-	width: 12rem;
+	width: 100%;
+	height: 25%;
 }
 
 .middle-space
@@ -258,7 +258,7 @@ li.product a:hover
 
 /* ---------- Quiz Animations ---------- */
 
-.submit:hover
+#submit:hover
 {
 	background-color: violet;
 }
