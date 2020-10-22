@@ -256,7 +256,7 @@ input.fake
 	border-color: red;
 }
 
-button#add
+fieldset button
 {
 	background-color: rgb(204, 0, 255);
 	border-radius: 2rem;
@@ -266,6 +266,12 @@ button#add
 	margin-top: 1rem;
 	padding: 0.5rem;
 	text-transform: uppercase;
+}
+
+fieldset button#clear
+{
+	background-color:rgb(207, 118, 230);
+	color: black;
 }
 
 /*---------- Actions, Animations ----------*/
@@ -307,7 +313,7 @@ li.product a:hover
 	background-color: violet;
 }
 
-button#add:hover
+fieldset button:hover
 {
 	background-color: rgb(142, 5, 177);
 	padding: 0.7rem;

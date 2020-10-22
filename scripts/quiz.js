@@ -1,4 +1,5 @@
-class Question {
+class Question 
+{
     constructor(question, answerA, answerB, answerC, answerD, correctAnswer) {
         this.question = question;
         this.answerA = answerA;
