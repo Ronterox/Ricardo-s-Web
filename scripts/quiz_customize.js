@@ -14,6 +14,7 @@ var questionsArray;
 const questionsElem = document.getElementById("questionsDiv");
 const buttonAdd = document.getElementById("add");
 const buttonClear = document.getElementById("clear");
+const buttonStart = document.getElementById("start");
 
 const questionElem = document.getElementById("question");
 const answerElem = document.getElementById("answer");
@@ -51,6 +52,10 @@ buttonAdd.addEventListener("click", addQuestion);
 buttonClear.addEventListener("click", function(){
     questionsElem.innerHTML = "";
     localStorage.removeItem("questions");
+});
+buttonStart.addEventListener("click", function(){
+    if(localStorage.getItem("questions")) location.href = '../pages/quiz.html';
+    else alert("Add some questions first!!!");
 });
 
 loadOldQuestions();
